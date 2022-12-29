@@ -1,7 +1,6 @@
 import cv2 as cv
 import numpy as np
 len=int(input("Enter length:"))
-#cap=c"C:\Users\Sahil\Downloads\R.png"
 
 while 1:
     frame=cv.imread(r"C:\Users\Sahil\Downloads\R.png")
@@ -12,7 +11,6 @@ while 1:
     
 
     _,contour=cv.findContours(mask,cv.RETR_TREE,cv.CHAIN_APPROX_SIMPLE)
-    print(contour)
     temp_length=cv.minAreaRect([contour.astype(int)])
     breadth=len*(temp_length/len)
     cv.drawContours(frame,[contour.astype(int)],-1,(0,255,0),2)
