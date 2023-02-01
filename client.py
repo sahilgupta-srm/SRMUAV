@@ -5,7 +5,7 @@ s.connect((socket.gethostname(),5050))
 msg=''
 while True:
     temp=s.recv(64)
-    if len(msg)<=0:
+    if len(temp)<=0:
         break
     msg+=temp.decode("utf-8")
 print(full_msg)
